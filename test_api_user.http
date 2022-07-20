@@ -1,0 +1,71 @@
+GET http://127.0.0.1:1012/users/
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:1012/users/2
+Accept: application/json
+
+###
+
+POST http://127.0.0.1:1012/users/
+Accept: application/json
+Content-Type: application/json
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Ik9rc2FuYSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTY2ODMzMjY4Mn0.YhSLSaahxHKEXG1vRb_u7LwE9nNyzGt5vY4LsfIA6_E
+
+{
+  "username": "Vitalii",
+  "password": "1234",
+  "role": "admin"
+}
+
+###
+
+PUT http://127.0.0.1:1012/users/4
+Accept: application/json
+Content-Type: application/json
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Ik9rc2FuYSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTY2ODMzMjY4Mn0.YhSLSaahxHKEXG1vRb_u7LwE9nNyzGt5vY4LsfIA6_E
+
+{
+  "username": "Vitalik",
+  "password": "123456478910",
+  "role": "user"
+}
+
+###
+
+PATCH http://127.0.0.1:1012/users/4
+Accept: application/json
+Content-Type: application/json
+
+{
+  "password": 123456478910
+}
+
+###
+
+DELETE http://127.0.0.1:1012/users/4
+
+
+
+###
+
+POST http://127.0.0.1:1012/auth/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "username": "Vitalii",
+  "password": "1234"
+}
+
+###
+
+
+PUT http://127.0.0.1:1012/auth/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "refresh_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Ik9rc2FuYSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTY2ODMzMjY4Mn0.YhSLSaahxHKEXG1vRb_u7LwE9nNyzGt5vY4LsfIA6_E"
+}

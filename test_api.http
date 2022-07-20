@@ -1,0 +1,97 @@
+GET http://127.0.0.1:1012/movies/
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:1012/movies/?director_id=12
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:1012/movies/?genre_id=4
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:1012/movies/?year=2010
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:1012/directors/
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:1012/directors/1
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:1012/genres/
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:1012/genres/1
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:1012/movies/21
+Accept: application/json
+
+###
+
+POST http://127.0.0.1:1012/movies/
+Accept: application/json
+Content-Type: application/json
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6IlZpdGFsaWkiLCJyb2xlIjoiYWRtaW4iLCJleHAiOjE2NTgzMjgyODF9.4vq0-LKZmNVgTPIBgEUwhyY9CAxDZ7nZNhuYEO1PaZo
+
+{
+  "title": "Джентльмены",
+  "trailer": "Супер фильм",
+  "year": 2020,
+  "rating": 10,
+  "description": "10 звезд из 10"
+}
+
+###
+
+PUT http://127.0.0.1:1012/movies/23
+Accept: application/json
+Content-Type: application/json
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6IlZpdGFsaWkiLCJyb2xlIjoiYWRtaW4iLCJleHAiOjE2NTgzMjgyODF9.4vq0-LKZmNVgTPIBgEUwhyY9CAxDZ7nZNhuYEO1PaZo
+
+{
+  "id": 23,
+  "title": "Проверяем",
+  "trailer": "Еще проверяем",
+  "year": 2020,
+  "rating": 1,
+  "description": "1 из 10",
+  "genre_id": 1,
+  "director_id": 1
+}
+
+###
+
+PATCH http://127.0.0.1:1012/movies/23
+Accept: application/json
+Content-Type: application/json
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6IlZpdGFsaWkiLCJyb2xlIjoiYWRtaW4iLCJleHAiOjE2NTgzMjgyODF9.4vq0-LKZmNVgTPIBgEUwhyY9CAxDZ7nZNhuYEO1PaZo
+
+{
+  "id": 22,
+  "title": "Проверяем",
+  "trailer": "Еще проверяем",
+  "year": 2020,
+  "rating": 1,
+  "description": "1 из 10",
+  "genre_id": 1,
+  "director_id": 1
+}
+
+###
+
+DELETE http://127.0.0.1:1012/movies/21
